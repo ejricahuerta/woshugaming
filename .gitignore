@@ -3,3 +3,8 @@
 ################################################################################
 
 /Woshu/Web/bin/Debug/netcoreapp3.1
+/Woshu/Web/obj
+/Woshu/Woshu/bin/Debug/netstandard2.1
+/Woshu/Woshu/obj
+/Woshu/.vs/Woshu
+/Woshu/Web/woshudb.db
