@@ -1,0 +1,24 @@
+﻿@page
+@model Web.Pages.LiveModel
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Live";
+}
+
+@section Scripts{
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+}
+
+<div class="w-100 h-100 d-flex flex-wrap align-items-center justify-content-center">
+    <div class="fb-video"
+         data-href="@Model.LiveURL"
+         data-width="1080"
+         data-allowfullscreen="true"
+         data-autoplay="true"
+         data-show-captions="true"></div>
+</div>
+<div class="text-center mt-2">
+    <a target="_blank" href="@Model.LiveURL">Chat with Woshu on the stream</a>
+</div>
+
+

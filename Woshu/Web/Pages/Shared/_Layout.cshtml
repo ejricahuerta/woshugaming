@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Woshu / @ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/theme.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark fixed-top shadow bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img height="75" src="~/img/WG_Horiz_Logo2_MonoColor_W-07.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item @(ViewBag.Title.Equals("Home")?"active text-primary":"") ml-md-auto ml-lg-auto">
+                            <a class="nav-link" asp-page="Index" asp-area="">
+                                <h5>
+                                    Home
+                                </h5>
+                            </a>
+                        </li>
+                        <li class="nav-item @(ViewBag.Title.Equals("Live")?"active text-primary":"")">
+                            <a class="nav-link" asp-page="Live" asp-area="">
+                                <h5>
+                                    Live
+                                </h5>
+                            </a>
+                        </li>
+                        <li class="nav-item @(ViewBag.Title.Equals("Tournament")?"active text-primary":"")">
+                            <a class="nav-link" asp-page="Tournament" asp-area="">
+                                <h5>
+                                    Tournament
+                                </h5>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container min-vh-100" style="padding-top:100px;">
+
+        @RenderBody()
+        <footer class="fixed-bottom text-center w-100 pb-2" style="">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/Woshugaming/">
+                        <h5>
+                            <i class="fab fa-facebook-square"></i>
+                            Facebook
+                        </h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/woshugaming/?hl=en">
+                        <h5>
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://discord.gg/3BuKKsqbNQ">
+                        <h5>
+                            <i class="fab fa-discord"></i>
+                            Discord
+                        </h5>
+                    </a>
+                </li>
+
+            </ul>
+            <div>
+
+                Created with <i class="fas fa-heart text-primary"></i> by
+                <a href="https://instagram.com/e_x_d">EXD</a>
+            </div>
+            <small>Don't worry bout your cookies! I keep them safe LOL :)</small>
+        </footer>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
